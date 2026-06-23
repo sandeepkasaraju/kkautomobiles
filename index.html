@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDrive Motors | Premium Sales & Services</title>
+    <meta name="description" content="AutoDrive Motors - A premium sales and services center for high-performance electric, sports, and luxury vehicles. Explore our elite fleet and book expert services.">
+    <!-- Google Fonts: Outfit for technical/bold headings, Inter for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="gauge" class="logo-icon"></i>
+                <span class="logo-text">AutoDrive<span>Motors</span></span>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu" id="menu-icon-icon"></i>
+            </button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#inventory" class="nav-link">Inventory</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#delivery" class="nav-link">Delivery</a></li>
+                    <li><a href="ceo.html" class="nav-link">CEO Message</a></li>
+                    <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="#calculator" class="btn btn-primary btn-sm">
+                    <i data-lucide="calendar"></i> Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge hero-badge"><i data-lucide="sparkles"></i> Redefining Excellence</span>
+                <h1>Drive the Future of <span>Performance</span></h1>
+                <p class="hero-lead">Welcome to AutoDrive Motors, where engineering masterpiece meets elite service. Explore our fleet of luxury and electric vehicles or schedule a precision tune-up with our certified technicians.</p>
+                <div class="hero-actions">
+                    <a href="#inventory" class="btn btn-gradient btn-lg">
+                        <i data-lucide="car"></i> Explore Fleet
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg">
+                        <i data-lucide="settings"></i> Our Services
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card-glow"></div>
+                <img src="assets/hero_car.png" alt="Futuristic electric sports car in dark showroom" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stat-card">
+                <div class="stat-icon-wrapper"><i data-lucide="award"></i></div>
+                <div class="stat-info">
+                    <h3 class="stat-number" data-target="15">15+</h3>
+                    <p class="stat-label">Years of Mastery</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-wrapper"><i data-lucide="car-front"></i></div>
+                <div class="stat-info">
+                    <h3 class="stat-number" data-target="5200">5.2K+</h3>
+                    <p class="stat-label">Elite Cars Sold</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-wrapper"><i data-lucide="users"></i></div>
+                <div class="stat-info">
+                    <h3 class="stat-number" data-target="99">99.4%</h3>
+                    <p class="stat-label">Happy Owners</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon-wrapper"><i data-lucide="wrench"></i></div>
+                <div class="stat-info">
+                    <h3 class="stat-number" data-target="24">24/7</h3>
+                    <p class="stat-label">Expert Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles Showcase -->
+    <section id="inventory" class="inventory-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Elite Showroom</span>
+                <h2>Featured Inventory</h2>
+                <p>Browse our handpicked collection of advanced electric hypercars, rugged luxury SUVs, and executive sedans.</p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Fleet</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="suv">SUVs</button>
+                <button class="filter-btn" data-filter="electric">Electric</button>
+            </div>
+
+            <!-- Inventory Grid -->
+            <div class="inventory-grid" id="inventory-grid">
+                <!-- Sports 1 -->
+                <div class="car-card" data-category="sports electric">
+                    <div class="car-image-container">
+                        <img src="assets/sports_car.png" alt="Apex Roadster">
+                        <span class="car-badge">In Stock</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Electric Supercar</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <h3>Apex Roadster</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 2.1s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>650mi Range</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>Dual Motor</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>AWD Active</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹1,25,00,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Apex Roadster">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUV 1 -->
+                <div class="car-card" data-category="suv electric">
+                    <div class="car-image-container">
+                        <img src="assets/suv_car.png" alt="Vanguard SUV">
+                        <span class="car-badge">Featured</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Luxury SUV</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <h3>Vanguard SUV</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 3.8s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>380mi Range</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>7 Seats</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>Autopilot v4</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹89,50,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Vanguard SUV">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electric Sedan -->
+                <div class="car-card" data-category="electric">
+                    <div class="car-image-container">
+                        <img src="assets/hero_car.png" alt="Volt Cruiser">
+                        <span class="car-badge">Trending</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Premium Sedan</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <h3>Volt Cruiser</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 4.2s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>420mi Range</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>Single Motor</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>RWD Comfort</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹64,00,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Volt Cruiser">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports 2 -->
+                <div class="car-card" data-category="sports">
+                    <div class="car-image-container">
+                        <img src="assets/sports_car.png" alt="Mach-X Hyper">
+                        <span class="car-badge">Limited</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Track Weapon</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                        <h3>Mach-X Hyper</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 1.9s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>1000+ HP</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>Quad-Motor</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>Active Aero</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹1,95,00,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Mach-X Hyper">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electric 2 -->
+                <div class="car-card" data-category="electric">
+                    <div class="car-image-container">
+                        <img src="assets/hero_car.png" alt="Nexus Luxury Sedan">
+                        <span class="car-badge">In Stock</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Executive Electric</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <h3>Nexus Lounge</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 4.8s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>350mi Range</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>Smart Assist</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>Panoramic Roof</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹52,00,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Nexus Lounge">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUV 2 -->
+                <div class="car-card" data-category="suv">
+                    <div class="car-image-container">
+                        <img src="assets/suv_car.png" alt="Terra-X Offroad">
+                        <span class="car-badge">New Arrival</span>
+                    </div>
+                    <div class="car-content">
+                        <div class="car-meta">
+                            <span class="car-tag">Adventure SUV</span>
+                            <div class="car-rating">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <h3>Terra-X Offroad</h3>
+                        <div class="car-specs">
+                            <div class="spec-item"><i data-lucide="gauge"></i><span>0-60: 4.5s</span></div>
+                            <div class="spec-item"><i data-lucide="zap"></i><span>320mi Range</span></div>
+                            <div class="spec-item"><i data-lucide="cpu"></i><span>Air Suspension</span></div>
+                            <div class="spec-item"><i data-lucide="shield-check"></i><span>Triple-Motor</span></div>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">₹98,00,000</div>
+                            <button class="btn btn-primary btn-sm btn-inquire" data-car="Terra-X Offroad">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-bg-image" style="background-image: linear-gradient(to right, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.7)), url('assets/service_bay.png');"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Precision Care</span>
+                <h2>Professional Auto Services</h2>
+                <p>Maintain peak performance with our certified engineering specialists. We repair and optimize mechanical and electric vehicles.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="scan-eye"></i></div>
+                    <h3>Precision Diagnostics</h3>
+                    <p>Advanced full-vehicle computer scanning, battery state-of-health tracking, and real-time electronic calibration.</p>
+                    <span class="service-cost">From ₹2,999</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="droplet"></i></div>
+                    <h3>Synthetic Fluids & Filters</h3>
+                    <p>Premium synthetic oil changes, coolant flushing, and filter replacements to optimize system thermal management.</p>
+                    <span class="service-cost">From ₹4,999</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Advanced Ceramic Detailing</h3>
+                    <p>Multi-stage paint correction, long-lasting quartz ceramic coatings, and interior deep-clean sterilization.</p>
+                    <span class="service-cost">From ₹19,999</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="zap"></i></div>
+                    <h3>EV Battery Balancing</h3>
+                    <p>Voltage cell balancing, thermal system optimization, and custom software updates for high-voltage battery packs.</p>
+                    <span class="service-cost">From ₹11,999</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Chassis & Alignment</h3>
+                    <p>Digital laser alignment, performance suspension tuning, active damper calibrations, and premium tire fitting.</p>
+                    <span class="service-cost">From ₹5,999</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Performance Safety Audit</h3>
+                    <p>Brake pad replacements, rotor resurfacing, regenerative braking inspection, and overall track readiness certificate.</p>
+                    <span class="service-cost">From ₹7,999</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Door Delivery Service Section -->
+    <section id="delivery" class="delivery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-amber"><i data-lucide="truck"></i> Premium Convenience</span>
+                <h2>Door-to-Door Delivery</h2>
+                <p>Can't make it to our shop? No problem. We provide contact-free vehicle pickup and delivery straight to your driveway.</p>
+            </div>
+
+            <div class="delivery-grid">
+                <!-- Delivery Info / Steps -->
+                <div class="delivery-info-card glass-panel">
+                    <h3>How It Works</h3>
+                    <div class="delivery-steps">
+                        <div class="delivery-step">
+                            <div class="step-num">1</div>
+                            <div>
+                                <h4>Schedule Pickup</h4>
+                                <p>Select 'Premium Door Pickup & Delivery' when scheduling your appointment or call our coordinator.</p>
+                            </div>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-num">2</div>
+                            <div>
+                                <h4>Insured Transport</h4>
+                                <p>Our professional, licensed drivers pick up your vehicle using secure towing or personal driving care.</p>
+                            </div>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-num">3</div>
+                            <div>
+                                <h4>Precision Workshop Servicing</h4>
+                                <p>Your car undergoes repairs, detailing, or balancing in our ultra-modern, clean workshop facility.</p>
+                            </div>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-num">4</div>
+                            <div>
+                                <h4>Driveway Drop-off</h4>
+                                <p>After a complimentary clean, we deliver the car back to your doorstep, sanitizing contact points.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distance Calculator Widget -->
+                <div class="delivery-calc-card glass-panel">
+                    <h3>Delivery Fee Estimator</h3>
+                    <p class="desc">Enter your distance from our Silicon District headquarters to compute delivery charge.</p>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="delivery-distance">Distance (in miles)</label>
+                        <div class="input-with-button">
+                            <input type="number" id="delivery-distance" class="form-control" placeholder="Enter distance, e.g. 15" min="1" max="100">
+                            <button type="button" id="btn-calc-delivery" class="btn btn-primary">Calculate</button>
+                        </div>
+                        <div id="delivery-calc-error" class="invalid-feedback">Please enter a valid distance between 1 and 100 miles.</div>
+                    </div>
+
+                    <div class="delivery-result-box" id="delivery-result" style="display: none;">
+                        <div class="result-line">
+                            <span>Base Service Fee:</span>
+                            <strong>₹1,500.00</strong>
+                        </div>
+                        <div class="result-line">
+                            <span>Mileage Charge (₹50/mi):</span>
+                            <strong id="result-mileage-cost">₹0.00</strong>
+                        </div>
+                        <div class="result-divider"></div>
+                        <div class="result-total">
+                            <span>Total Delivery Cost:</span>
+                            <span id="result-total-cost">₹1,500.00</span>
+                        </div>
+                        <p class="result-note"><i data-lucide="info"></i> Deliveries beyond 50 miles require flatbed dispatching fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Service Booking & Cost Estimator -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Dynamic Estimator</span>
+                <h2>Book Service & Estimate Cost</h2>
+                <p>Select your vehicle profile and service options. Get an immediate cost estimation and schedule your slot instantly.</p>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Form Inputs -->
+                <div class="calculator-card glass-panel">
+                    <form id="booking-form" novalidate>
+                        <h3 class="card-title"><i data-lucide="clipboard-list"></i> Appointment Details</h3>
+                        
+                        <!-- Step 1: Vehicle Profile -->
+                        <div class="form-group">
+                            <label for="calc-vehicle-type">Vehicle Category</label>
+                            <select id="calc-vehicle-type" class="form-control" required>
+                                <option value="sedan">Standard Sedan (Base Multiplier 1.0x)</option>
+                                <option value="suv">Luxury SUV (Base Multiplier 1.2x)</option>
+                                <option value="sports">High-Performance Sports (Base Multiplier 1.5x)</option>
+                                <option value="electric">Electric Vehicle (Base Multiplier 1.1x)</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 2: Choose Services -->
+                        <div class="form-group">
+                            <label>Select Services Required</label>
+                            <div class="services-checkbox-list">
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="diagnostics" data-price="2999" checked>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Precision Diagnostics</span>
+                                    <span class="checkbox-price">+₹2,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="oil-change" data-price="4999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Synthetic Fluids Service</span>
+                                    <span class="checkbox-price">+₹4,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="detailing" data-price="19999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Ceramic detailing package</span>
+                                    <span class="checkbox-price">+₹19,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="ev-battery" data-price="11999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">EV Battery Balancing</span>
+                                    <span class="checkbox-price">+₹11,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="alignment" data-price="5999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Chassis & Laser Alignment</span>
+                                    <span class="checkbox-price">+₹5,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="safety-audit" data-price="7999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Performance Safety Audit</span>
+                                    <span class="checkbox-price">+₹7,999</span>
+                                </label>
+                                <label class="service-checkbox-label">
+                                    <input type="checkbox" name="services" value="delivery" data-price="1999">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-title">Premium Door Pickup & Delivery</span>
+                                    <span class="checkbox-price">+₹1,999</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Contact & Booking Slot -->
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="book-name">Full Name</label>
+                                <input type="text" id="book-name" class="form-control" placeholder="John Doe" required>
+                                <div class="invalid-feedback">Name is required.</div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="book-email">Email Address</label>
+                                <input type="email" id="book-email" class="form-control" placeholder="john@example.com" required>
+                                <div class="invalid-feedback">Enter a valid email.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="book-date">Preferred Date</label>
+                                <input type="date" id="book-date" class="form-control" required>
+                                <div class="invalid-feedback">Select a future date.</div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="book-time">Preferred Time</label>
+                                <select id="book-time" class="form-control" required>
+                                    <option value="">Choose Time...</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                                <div class="invalid-feedback">Select a time slot.</div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-gradient btn-block btn-lg" style="width: 100%; margin-top: 15px;">
+                            <i data-lucide="check-circle"></i> Confirm Booking Slot
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Calculator Bill Summary -->
+                <div class="calculator-summary-card glass-panel">
+                    <h3 class="card-title"><i data-lucide="receipt"></i> Live Cost Estimate</h3>
+                    
+                    <div class="summary-details">
+                        <div class="summary-line">
+                            <span>Selected Vehicle Rate:</span>
+                            <strong id="summary-multiplier">1.0x (Sedan)</strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>Base Diagnostics:</span>
+                            <span id="summary-base-rate">₹2,999.00</span>
+                        </div>
+                        <div class="summary-line-divider"></div>
+                        <ul class="summary-selected-services" id="summary-services-list">
+                            <li>Precision Diagnostics <span>₹2,999.00</span></li>
+                        </ul>
+                        <div class="summary-line-divider"></div>
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="summary-subtotal">₹2,999.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>GST (18%):</span>
+                            <span id="summary-tax">₹539.82</span>
+                        </div>
+                        <div class="summary-line-divider"></div>
+                        <div class="summary-total-line">
+                            <span>Estimated Total:</span>
+                            <span id="summary-total">₹3,538.82</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-footer">
+                        <div class="badge badge-success"><i data-lucide="check"></i> Best Price Guarantee</div>
+                        <p class="summary-terms">Price is estimates only. Final quotes are provided in-shop upon active mechanical intake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Owner Reviews</span>
+                <h2>What AutoDrive Owners Say</h2>
+                <p>Read experiences from automotive enthusiasts who entrust their sports and luxury electric cars to our specialists.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"AutoDrive Motors changed how I purchase premium cars. The electric Apex Roadster is an absolute rocket, and the delivery experience felt like a VIP event. Simply phenomenal team."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder">AH</div>
+                        <div>
+                            <h4>Alexander H.</h4>
+                            <p class="user-sub">Apex Roadster Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"I bring my electric SUV here for diagnostics and battery balancing. The digital live price calculator is super accurate, and their workshop is cleaner than a scientific lab. Highly recommended."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder">SV</div>
+                        <div>
+                            <h4>Sarah V.</h4>
+                            <p class="user-sub">Vanguard SUV Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Outstanding service! From ceramic coating detailing to performance safety tracking, the engineering team handles cars with supreme accuracy. Five-star rating across all operations."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder">MD</div>
+                        <div>
+                            <h4>Marcus D.</h4>
+                            <p class="user-sub">Mach-X Hyper Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Get in Touch</span>
+                <h2>Visit Our Headquarters</h2>
+                <p>Connect with our showroom experts or reach our workshop technicians for scheduling guidance.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-card glass-panel">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="John Doe" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="john@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Inquiry Subject</label>
+                            <select id="contact-subject" class="form-control" required>
+                                <option value="sales">Vehicle Purchasing (Sales)</option>
+                                <option value="service">Vehicle Servicing (Repairs & Tune-ups)</option>
+                                <option value="custom">Custom Upgrades (Performance)</option>
+                                <option value="other">General Inquiries</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message Details</label>
+                            <textarea id="contact-message" rows="4" class="form-control" placeholder="How can we assist you?" required></textarea>
+                            <div class="invalid-feedback">Please enter your message details.</div>
+                        </div>
+                        <button type="submit" class="btn btn-gradient btn-lg btn-block" style="width:100%;">
+                            <i data-lucide="send"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info and Map -->
+                <div class="contact-info-panel glass-panel">
+                    <div class="info-details">
+                        <h3>Showroom & Workshop</h3>
+                        
+                        <div class="info-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <p><strong>Address:</strong> 100 Hyperion Boulevard, Suite 500</p>
+                                <p>Silicon District, CA 90210</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <p><strong>Direct Line:</strong> +1 (800) 555-DRIV</p>
+                                <p><strong>Service Desk:</strong> +1 (800) 555-SERV</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i data-lucide="clock"></i>
+                            <div>
+                                <p><strong>Sales Hours:</strong> Mon - Sat: 9:00 AM - 7:00 PM</p>
+                                <p><strong>Workshop Hours:</strong> Mon - Fri: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom SVG stylized map locator -->
+                    <div class="map-placeholder">
+                        <div class="map-glow"></div>
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="stylized-map">
+                            <!-- Custom grid mesh -->
+                            <defs>
+                                <pattern id="map-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(2, 132, 199, 0.08)" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#map-grid)" />
+                            
+                            <!-- Stylized road shapes -->
+                            <path d="M -50 120 C 100 120, 150 50, 450 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="15" />
+                            <path d="M 200 -50 L 200 250" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="8" />
+                            <path d="M 80 -50 L 320 250" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="5" />
+                            
+                            <!-- Glowing highlight routes -->
+                            <path d="M -50 120 C 100 120, 150 50, 450 50" fill="none" stroke="rgba(2, 132, 199, 0.2)" stroke-width="3" />
+                            <path d="M 200 -50 L 200 250" fill="none" stroke="rgba(6, 182, 212, 0.2)" stroke-width="2" />
+                            
+                            <!-- Shop Location Pin Glow -->
+                            <circle cx="200" cy="90" r="18" fill="rgba(2, 132, 199, 0.25)" class="pulse-ring" />
+                            <circle cx="200" cy="90" r="10" fill="rgba(6, 182, 212, 0.4)" />
+                            <circle cx="200" cy="90" r="4" fill="#ffffff" />
+                            
+                            <!-- Labels -->
+                            <text x="215" y="85" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold">AutoDrive Headquarters</text>
+                            <text x="215" y="98" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="9">Hyperion Blvd & Tech Way</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i data-lucide="gauge" class="logo-icon"></i>
+                    <span class="logo-text">AutoDrive<span>Motors</span></span>
+                </a>
+                <p>Connecting future automotive technology with meticulous mechanics to keep your performance absolute.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Our Fleet</h3>
+                <ul>
+                    <li><a href="#inventory">Apex Roadster</a></li>
+                    <li><a href="#inventory">Vanguard SUV</a></li>
+                    <li><a href="#inventory">Volt Cruiser</a></li>
+                    <li><a href="#inventory">Mach-X Hyper</a></li>
+                    <li><a href="#inventory">Nexus Lounge</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Chassis Diagnostics</a></li>
+                    <li><a href="#services">Ceramic Detailing</a></li>
+                    <li><a href="#services">Battery Calibration</a></li>
+                    <li><a href="#services">Safety Audits</a></li>
+                    <li><a href="#services">Schedule Estimator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive news on custom releases and elite track-day event invitations.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required class="form-control">
+                    <button type="submit" class="btn btn-primary"><i data-lucide="arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AutoDrive Motors Inc. All Rights Reserved. Crafted for Performance.</p>
+            <div class="footer-meta-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INQUIRY MODAL -->
+    <div class="modal-backdrop" id="inquiry-modal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-header-section">
+                <span class="badge badge-amber"><i data-lucide="info"></i> Purchase Inquiry</span>
+                <h3 id="modal-car-title">Apex Roadster</h3>
+                <p>Send a direct specification request. Our sales consultants will follow up within 2 business hours.</p>
+            </div>
+            
+            <form id="inquiry-form" novalidate>
+                <input type="hidden" id="inquiry-car-name">
+                
+                <div class="form-group">
+                    <label for="inquire-name">Full Name</label>
+                    <input type="text" id="inquire-name" class="form-control" placeholder="John Doe" required>
+                    <div class="invalid-feedback">Full name is required.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquire-email">Email Address</label>
+                    <input type="email" id="inquire-email" class="form-control" placeholder="john@example.com" required>
+                    <div class="invalid-feedback">Valid email address is required.</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="inquire-phone">Phone Number</label>
+                        <input type="tel" id="inquire-phone" class="form-control" placeholder="(555) 123-4567" required>
+                        <div class="invalid-feedback">Phone number is required.</div>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inquire-finance">Finance Option</label>
+                        <select id="inquire-finance" class="form-control">
+                            <option value="cash">Outright Purchase (Cash/Wire)</option>
+                            <option value="finance">Auto financing (36-72 months)</option>
+                            <option value="lease">Corporate Lease (24-48 months)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="service-checkbox-label">
+                        <input type="checkbox" id="inquire-test-drive" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-title">Request VIP Test Drive reservation slot</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-gradient btn-block btn-lg" style="width:100%; margin-top: 10px;">
+                    <i data-lucide="send"></i> Submit Purchase Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- App JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
